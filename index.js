@@ -48,8 +48,12 @@ cardArray.sort(() => 0.5 - Math.random())
 const gridDisplay = document.querySelector('#grid')
 
 const createBoard = () => {
-    for(let i=0; i < 10; i++) {
-        console.log(i)
+    for(let i=0; i < cardArray.length; i++) {
+        const card = document.createElement('img')
+        card.setAttribute('src', 'images/blank.png')
+        card.setAttribute('data-id', i)
+        console.log(card, i)
+        gridDisplay.appendChild(card)
     }
 }
 
