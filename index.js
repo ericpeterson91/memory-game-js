@@ -45,4 +45,12 @@ const cardArray = [
 
 cardArray.sort(() => 0.5 - Math.random())
 
-console.log(cardArray)
+const gridDisplay = document.querySelector('#grid')
+
+const createBoard = () => {
+    for(let i=0; i < 10; i++) {
+        console.log(i)
+    }
+}
+
+createBoard()
