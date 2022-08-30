@@ -44,15 +44,12 @@ const cardArray = [
 ]
 
 
-function flipCard() {
-    
-    const cardId = this.getAttribute('data-id')
-    console.log('clicked at ' + cardId)
-}
+
 
 cardArray.sort(() => 0.5 - Math.random())
 
 const gridDisplay = document.querySelector('#grid')
+const cardsChosen = []
 
 const createBoard = () => {
     for(let i=0; i < cardArray.length; i++) {
@@ -65,4 +62,13 @@ const createBoard = () => {
 }
 
 createBoard()
+
+function flipCard() {
+    
+    const cardId = this.getAttribute('data-id')
+    console.log('clicked at ' + cardId)
+    cardsChosen.push(cardArray[cardId].name)
+    console.log(cardsChosen)
+    
+}
 
